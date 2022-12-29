@@ -1,0 +1,29 @@
+{
+  "name": "to-do-lists",
+  "version": "1.0.0",
+  "description": "mini app to do list practise",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "clientinstall": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nulnul7/todolists.git"
+  },
+  "author": "Djap Benny fr",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
