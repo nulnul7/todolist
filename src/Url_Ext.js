@@ -1,0 +1,1 @@
+export const URL_Ext = 'https://combative-newt-suspenders.cyclic.app'
