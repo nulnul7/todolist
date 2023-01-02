@@ -11,7 +11,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nulnul7/todolists.git"
+    "url": "https://github.com/nulnul7/todolist.git"
   },
   "author": "Djap Benny fr",
   "dependencies": {
