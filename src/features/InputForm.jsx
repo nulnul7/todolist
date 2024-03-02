@@ -13,7 +13,7 @@ const InputForm = () => {
             dateline: date, todo, priority
         }
         try {
-            await axios.post(`${URL_Ext}/5R2I/todo/add/`,  dataTodo )
+            await axios.post(`${URL_Ext}/todo/add`, dataTodo )
             console.log('Submit 123', dataTodo );
 
         } catch (error) {

@@ -14,22 +14,27 @@ const Content = () => {
   const [editStatus, setEditStatus] = useState(false)
   const [dumpData, setDumpData] = useState([])
 
-  const { data } = FetchData(`${URL_Ext}/5R2I/todo/`)
+  const { data } = FetchData(`${URL_Ext}/todo/`)
    
   const delHandle = async (id) => {
-    await axios.delete(`${URL_Ext}/5R2I/todo/${id}`)
+    await axios.delete(`${URL_Ext}/todo/${id}`)
     console.log('list todo deleted');
     window.location.reload();
   }
 
   const editHandle = async (id) => {
     setEditStatus(true)
-    try {      
-      const res = await axios.get(`${URL_Ext}+/5R2I/todo/${id}`)
-      setDumpData(res.data)
-    } catch (error) {
-      console.log(error);
+    const getData = async () => {
+      try {      
+        const res = await axios.get(`${URL_Ext}/todo/${id}`)
+        const setJson = await res.data
+        setDumpData(setJson)
+      } catch (error) {
+        console.log(error);
+      }
     }
+
+    await getData();
     // getDB => edit form => onChange to editDB => onSubmit setEditDB._id === editDB
   }
 

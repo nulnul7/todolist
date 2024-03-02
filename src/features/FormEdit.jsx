@@ -17,14 +17,14 @@ const FormEdit = ( {dumpData} ) => {
             priority: editPriority
         }
         try {
-            await axios.put(`${URL_Ext}+/5R2I/todo/update/${id}`, updateTodo)
+            await axios.put(`${URL_Ext}/todo/update/${id}`, updateTodo)
             console.log('update Success');
         } catch (error) {
             console.log(error);
         }
         
         e.preventDefault();
-        console.log('works hadnle', editDate, editTodo, editPriority);
+        console.log('works handle', editDate, editTodo, editPriority);
     }
 
 
